@@ -7,7 +7,7 @@ export default function RSSReader() {
   const getRss = async (e) => {
     e.preventDefault();
     const urlRegex =
-      /(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/;
+      /(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:~+#-]*[\w@?^=%&amp;~+#-])?/;
     if (!urlRegex.test(rssUrl)) {
       console.log("not url path");
       return;
