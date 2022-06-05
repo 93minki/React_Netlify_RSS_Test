@@ -20,11 +20,15 @@ export default function RSSReader() {
     const items = feed.querySelectorAll("item");
     console.log("items", items);
 
-    const feedItems = [...items].map((el) => ({
-      link: el.querySelector("link").innerHTML,
-      title: el.querySelector("title").innerHTML,
-      date: el.querySelector("pubDate").innerHTML,
-    }));
+    const feedItems = [...items].map((el) => {
+      console.log("el", el);
+      return {
+        link: el.querySelector("link").innerHTML,
+        title: el.querySelector("title").innerHTML,
+        date: el.querySelector("pubDate").innerHTML,
+      };
+    });
+
     console.log("feedItems", feedItems);
     setItems(feedItems);
   };
